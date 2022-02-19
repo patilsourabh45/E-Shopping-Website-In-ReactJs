@@ -13,9 +13,22 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import logo from '../images/logo.png'
 import {Link} from 'react-router-dom';
+import "../css/header.scss"
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import Badge from '@mui/material/Badge';
+import { styled } from '@mui/material/styles';
 
 const pages = ['Home', 'Products','My Orders','Login','Signup','About us'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+
+const StyledBadge = styled(Badge)(({ theme }) => ({
+  '& .MuiBadge-badge': {
+    right: -3,
+    top: 13,
+    border: `2px solid ${theme.palette.background.paper}`,
+    padding: '0 2px',
+  },
+}));
 
 const Header = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -78,11 +91,40 @@ const Header = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
+              {/* {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
-              ))}
+              ))} */}
+
+                <MenuItem  onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center"><Link className="navbar-title1" to="/">Home</Link></Typography>
+                </MenuItem>
+
+                <MenuItem  onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center"><Link className="navbar-title1" to="/products">Products</Link> 
+                  </Typography>
+                </MenuItem>
+
+                <MenuItem  onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">                <Link className="navbar-title1" to="/myorders">My Orders</Link> 
+                  </Typography>
+                </MenuItem>
+
+                <MenuItem  onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">                <Link className="navbar-title1" to="/login">Login</Link> 
+                  </Typography>
+                </MenuItem>
+
+                <MenuItem  onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">               <Link className="navbar-title1" to="/signup">Signup</Link> 
+                  </Typography>
+                </MenuItem>
+
+                <MenuItem  onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">                <Link className="navbar-title1"  to="/aboutus">AboutUs</Link> 
+                  </Typography>
+                </MenuItem>
             </Menu>
           </Box>
           <Typography
@@ -93,7 +135,7 @@ const Header = () => {
           >
            <img src={logo} height="60px" width="70px" alt="LOGO"></img>
           </Typography>
-          <Box style={{marginLeft:"10px"}}  sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {/* {pages.map((page) => (
               <Button
               style={{marginLeft:"10px"}}
@@ -110,7 +152,7 @@ const Header = () => {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-               <Link style={{textDecoration:"none",color:"white"}} to="/">Home</Link> 
+               <Link className="navbar-title" to="/">Home</Link> 
               </Button>
 
               <Button
@@ -118,7 +160,7 @@ const Header = () => {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-               <Link style={{textDecoration:"none",color:"white"}} to="/products">Products</Link> 
+               <Link className="navbar-title" to="/products">Products</Link> 
               </Button>
 
               <Button
@@ -126,7 +168,7 @@ const Header = () => {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                <Link style={{textDecoration:"none",color:"white"}} to="/myorders">MyOrders</Link> 
+                <Link className="navbar-title" to="/myorders">My Orders</Link> 
               </Button>
 
               <Button
@@ -134,7 +176,7 @@ const Header = () => {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                <Link style={{textDecoration:"none",color:"white"}} to="/login">Login</Link> 
+                <Link className="navbar-title" to="/login">Login</Link> 
               </Button>
 
               <Button
@@ -142,7 +184,7 @@ const Header = () => {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-               <Link style={{textDecoration:"none",color:"white"}} to="/signup">Signup</Link> 
+               <Link className="navbar-title" to="/signup">Signup</Link> 
               </Button>
 
               <Button
@@ -150,9 +192,16 @@ const Header = () => {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                <Link style={{textDecoration:"none",color:"white"}}  to="/aboutus">AboutUs</Link> 
+                <Link className="navbar-title"  to="/aboutus">AboutUs</Link> 
               </Button>
+
           </Box>
+
+          <IconButton className="CartBadge" style={{marginRight:"30px"}} aria-label="cart">
+      <StyledBadge  badgeContent={4} color="secondary">
+        <ShoppingCartIcon />
+      </StyledBadge>
+    </IconButton>
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
