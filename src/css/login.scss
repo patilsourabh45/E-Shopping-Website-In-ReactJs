@@ -1,0 +1,54 @@
+.loginCard{
+position: absolute;
+top: 50%;
+left: 50%;
+margin-right: -50%;
+transform: translate(-50%, -50%);
+}
+
+.signupCard{
+position: absolute;
+top: 59%;
+left: 50%;
+margin-right: -50%;
+transform: translate(-50%, -50%);
+}
+.signup-card{
+    height:480px;
+    width:400px;
+}
+.login-card-1{
+    height:320px;
+    width:400px;
+}
+
+.email-text{
+    width:100% ;
+     
+}
+
+.email-margin{
+    margin-bottom:15px;
+}
+
+.p-style{
+text-align: center  ;
+margin: 2px;
+}
+
+.card-link{
+    text-decoration: none;
+    color: #1976d2;
+    font-weight: 500;
+}
+
+.login-policy{
+    text-align: center;
+    font-size: 12px !important;
+}
+
+.login-policy-1{
+text-decoration: none;
+color: #1976d2;
+font-weight: 500;
+}
