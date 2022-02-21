@@ -17,7 +17,7 @@ function App() {
         <Header></Header>
 
       </div>
-      <div style={{ height: "150px" }}></div>
+      <div style={{ height: "70px" }}></div>
       <Routes>
         <Route path='/' element={<HomePage />} exact></Route>
         <Route path='/products' element={<Products />} ></Route>
