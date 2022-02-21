@@ -34,7 +34,7 @@ import "../css/products.scss"
         </Typography>
       </CardContent>
       <CardActions className="addToCart-btn">
-        <Button  variant="contained" size="large">Add To Cart</Button>
+        <Button  variant="contained" size="small">Add To Cart</Button>
       </CardActions>
     </Card>
     </Grid>
