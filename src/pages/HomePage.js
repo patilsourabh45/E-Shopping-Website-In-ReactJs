@@ -2,8 +2,12 @@ import React from 'react'
 import Brandcall from './Brandcall'
 import SliderBanner from './SliderBanner'
 import Trending from './Trending'
+import Footer from "../components/Footer"
+
+
 const HomePage = () => {
   return (
+    <>
     <div className='home-container'>
 <SliderBanner />
 <Brandcall />
@@ -11,6 +15,8 @@ const HomePage = () => {
 <Trending title='Trending Sneakers' />
 <Trending title='Trending T-shirts' />
     </div>
+    <Footer></Footer>
+    </>
   )
 }
 

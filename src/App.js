@@ -7,7 +7,7 @@ import Products from './pages/Products';
 import Signup from './pages/Signup';
 import Pagenotfound from './pages/Pagenotfound';
 import { BrowserRouter, Link, Route, Routes} from 'react-router-dom';
-import Footer from './components/Footer'
+// import Footer from './components/Footer'
 
 function App() {
   return (
@@ -27,9 +27,9 @@ function App() {
         <Route path='/aboutus' element={<AboutUs />} ></Route>
         <Route path='*' element={<Pagenotfound />}></Route>
       </Routes>
+      {/* <Footer></Footer> */}
     </BrowserRouter>
-    {/* <Footer></Footer> */}
-
+    
     </>
   );
 }
