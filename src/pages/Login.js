@@ -21,22 +21,37 @@ const bull = (
 
 export default function Login() {
   return (
-    <Grid className="loginCard" item xs={12} sm={6} lg={4}>  
+    <div className="login-background">
+    <Grid className="loginCard " item xs={12} sm={6} lg={4}>  
     <Card className="login-card-1" sx={{ minWidth: 275 }}>
       <CardContent>
 
-        <Typography style={{textAlign:"center"}} sx={{ fontSize: 22 }} color="text.secondary" gutterBottom>
+        <Typography className="login-heading" color="text.secondary" gutterBottom>
          Login
         </Typography>
 
         <div className="email-margin">
-        <TextField className="email-text" id="standard-basic" label="Email" variant="standard" /> 
+        <TextField  
+        required 
+        placeholder="Enter Email"
+        className="email-text" 
+        id="standard-basic" 
+        label="Email" 
+        variant="standard" /> 
         </div>
 
-        <div  className="email-margin">
-        <TextField className="email-text"  id="standard-basic" label="Password" variant="standard" /> 
+        <div className="email-margin">
+        <TextField 
+        required 
+        placeholder="Enter Password"
+        className="email-text"  
+        id="standard-basic" 
+        label="Password" 
+        variant="standard" /> 
         </div>   
       </CardContent>
+
+      <Typography className="forgot-password"><Link className="card-link" to="#">Forgot Password ?</Link></Typography>
 
       <Typography className="login-policy" color="text.secondary">By continuing, you agree to Flipkart's <Link className="login-policy-1" to="#">Terms of Use </Link>and <Link className="login-policy-1"  to="#">Privacy Policy</Link>.</Typography>
       
@@ -47,5 +62,6 @@ export default function Login() {
       <p className="p-style">Don't have an account? <Link className="card-link" to="/signup">Signup</Link></p>
     </Card>
     </Grid>
+    </div>
   );
 }

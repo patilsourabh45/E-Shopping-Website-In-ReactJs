@@ -24,28 +24,73 @@ export default function Signup() {
     <Grid className="signupCard" item xs={12} sm={6} lg={4}>  
     <Card className="signup-card" sx={{ minWidth: 275 }}>
       <CardContent>
-        <Typography style={{textAlign:"center"}} sx={{ fontSize: 22 }} color="text.secondary" gutterBottom>
+        <Typography className="login-heading" color="text.secondary" gutterBottom>
          Signup
         </Typography>
+
         <div className="email-margin">
-        <TextField className="email-text"  id="standard-basic" label="Name" variant="standard" /> 
+        <TextField 
+        required
+        placeholder="Enter Name" 
+        className="email-text" 
+         id="standard-basic" 
+         label="Name" 
+         variant="standard" 
+         /> 
         </div>  
+
         <div className="email-margin">
-        <TextField className="email-text" id="standard-basic" label="Email" variant="standard" /> 
+        <TextField 
+        required 
+        placeholder="Enter Email"
+        className="email-text" 
+        id="standard-basic" 
+        label="Email" 
+        variant="standard" /> 
         </div>
-        <div  className="email-margin">
-        <TextField className="email-text"  id="standard-basic" label="Mobile Number" variant="standard" /> 
+
+        <div className="email-margin">
+        <TextField 
+        required
+        placeholder="Enter Mobile Number" 
+        className="email-text"  
+        id="standard-basic" 
+        type="number"
+        label="Mobile Number" 
+        variant="standard" 
+        onInput = {(e) =>{
+          e.target.value = Math.max(0, parseInt(e.target.value) ).toString().slice(0,10)
+      }}       
+        /> 
         </div>
-        <div  className="email-margin">
-        <TextField className="email-text"  id="standard-basic" label="New Password" variant="standard" /> 
+
+        <div className="email-margin">
+        <TextField 
+        required 
+        placeholder="Enter New Password"
+        className="email-text"  
+        id="standard-basic" 
+        label="New Password" 
+        variant="standard" /> 
         </div>  
+
         <div>
-        <TextField className="email-text"  id="standard-basic" label="Confirm Password" variant="standard" /> 
-        </div>     
+        <TextField 
+        required 
+        placeholder="Confirm New Password"
+        className="email-text" 
+         id="standard-basic" 
+         label="Confirm Password" 
+         variant="standard" /> 
+        </div>
       </CardContent>
+
       <CardActions style={{justifyContent:"center"}}>
-        <Button size="large" variant="contained">Signup</Button>
+        <Button 
+        size="large" 
+        variant="contained">Signup</Button>
       </CardActions>
+
       <p className="p-style">Already have an account? <Link className="card-link" to="/login">Login</Link></p>
     </Card>
     </Grid>

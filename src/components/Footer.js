@@ -93,12 +93,12 @@ export default function Footer() {
 
             <Grid item xs={12} sm={3}>
               <Box className="footer-head">Contact</Box>
-              <Box className="footer-options">
+              <Box className="footer-options-1">
                 <Typography color="inherit">
                 Customer Service:
                 </Typography>
               </Box>
-              <Box className="footer-options">
+              <Box className="footer-options-1">
                 <Typography color="inherit">
                 123-456-7890
                 </Typography>
