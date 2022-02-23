@@ -199,7 +199,8 @@ const Header = () => {
 
           <IconButton className="CartBadge" style={{marginRight:"30px"}} aria-label="cart">
       <StyledBadge  badgeContent={4} color="secondary">
-        <ShoppingCartIcon />
+      <Link className="navbar-title" to="/shopcart"><ShoppingCartIcon /></Link> 
+        
       </StyledBadge>
     </IconButton>
 

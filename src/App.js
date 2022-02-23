@@ -6,6 +6,7 @@ import MyOrders from './pages/MyOrders';
 import Products from './pages/Products';
 import Signup from './pages/Signup';
 import Pagenotfound from './pages/Pagenotfound';
+import ShopCart from './pages/ShopCart';
 import { BrowserRouter, Link, Route, Routes} from 'react-router-dom';
 // import Footer from './components/Footer'
 
@@ -26,6 +27,7 @@ function App() {
         <Route path='/signup' element={<Signup />} ></Route>
         <Route path='/aboutus' element={<AboutUs />} ></Route>
         <Route path='*' element={<Pagenotfound />}></Route>
+        <Route path='/shopcart' element={<ShopCart />} ></Route>
       </Routes>
       {/* <Footer></Footer> */}
     </BrowserRouter>
