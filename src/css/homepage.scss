@@ -15,13 +15,11 @@
 .slick-prev { left: 3% !important; z-index: 1; color: black !important;} 
 .slick-next { right: 3% !important; z-index: 1; color: black !important; } 
 .slick-prev::before, .slick-next::before {
-
   color: #060606 !important;}
 
   .slider-container{
-  
       .css-1eehwzh-MuiGrid-root{
-max-width: 85%;
+        max-width: 85%;
       }
       .slick-track{
         padding: 0 17px;

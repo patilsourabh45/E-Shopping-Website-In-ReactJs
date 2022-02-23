@@ -35,7 +35,7 @@ transform: translate(-50%, -50%);
 }
 
 .p-style{
-text-align: center  ;
+text-align: center;
 margin: 2px;
 }
 
@@ -93,4 +93,22 @@ body{
 
 .image-1{
 background-image: url("../images/image2.jpg");
+}
+
+.signup-inputs{
+.css-1kuc5br-MuiGrid-root>.MuiGrid-item {
+    padding-top: 0px !important;
+}
+}
+
+.mainbox-1{
+    .MuiBox-root .css-1y8ugea{
+        margin-top:40px !important;
+    }
+}
+
+.login-btn-new{
+    .css-1vhaqj4-MuiButtonBase-root-MuiButton-root{
+        margin-top:15px !important;
+    }
 }

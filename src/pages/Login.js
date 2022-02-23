@@ -66,6 +66,7 @@ export default function Login() {
           </Grid>
         <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
           <Box
+          className="mainbox-1"
             sx={{
               my: 8,
               mx: 4,
@@ -110,6 +111,7 @@ export default function Login() {
                 label="Remember me"
               />
               <Button
+              className="login-btn-new"
                 type="submit"
                 fullWidth
                 variant="contained"
@@ -125,11 +127,11 @@ export default function Login() {
                 </Grid>
                 <Grid item >
                   <Link className="card-link" to="/signup">
-                    Don't have an account? Sign Up
+                    Don't have an account? Signup
                   </Link>
                 </Grid>
               </Grid>
-              <Copyright style={{marginTop:"15px"}}/>
+              {/* <Copyright style={{marginTop:"15px"}}/> */}
             </Box>
           </Box>
         </Grid>
