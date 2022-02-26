@@ -26,11 +26,11 @@ import "../css/products.scss"
           <div class="overlay">Quick View</div>
         </div>
       <CardContent style={{padding:"10px"}}>
-        <Typography style={{textAlign:"center"}} gutterBottom variant="h5" component="div" color="text.secondary">
-         {props.title}
+        <Typography noWrap style={{textAlign:"center"}} gutterBottom variant="h6" component="div" color="text.secondary">
+        {props.title}
         </Typography>
         <Typography className="product-price" variant="body2" >
-         {props.price}
+        &#8377; {props.price}
         </Typography>
       </CardContent>
       <CardActions className="addToCart-btn">
