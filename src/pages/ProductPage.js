@@ -1,5 +1,5 @@
 
-import * as React from 'react';
+import  React,{useEffect} from 'react';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -9,8 +9,8 @@ import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import tshirt1 from "../images/tshirt1.jpg"
 import "../css/products.scss"
+ function ProductPage(props) {
 
- function ProductPage() {
   return (
       <>
       {/* <h1 style={{textAlign:"center"}}>Products</h1> */}
@@ -20,17 +20,17 @@ import "../css/products.scss"
       <CardMedia
         component="img"
         height="200"
-        image={tshirt1}
+        image={props.image}
         alt="tshirt"
       />
           <div class="overlay">Quick View</div>
         </div>
       <CardContent style={{padding:"10px"}}>
         <Typography style={{textAlign:"center"}} gutterBottom variant="h5" component="div" color="text.secondary">
-         US Polo t-shirt
+         {props.title}
         </Typography>
         <Typography className="product-price" variant="body2" >
-         500 Rs
+         {props.price}
         </Typography>
       </CardContent>
       <CardActions className="addToCart-btn">

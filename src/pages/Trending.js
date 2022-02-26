@@ -43,20 +43,13 @@ const Trending = (props) => {
       };
         return (
           <div className='slider-container'>
-            <h2 style={{color:'#1976d2',marginLeft:'2rem'}}>{props.title}</h2>
+            <h2 style={{color:'#1976d2',marginLeft:'2rem'}}>{props.header}</h2>
             <Slider {...settings}>
-              <ProductPage />
-              <ProductPage />
+            
+              {props.data.map((product)=>{
+ return <ProductPage title={product.title} image={product.image} price={product.price} key={product.key}/>
 
-              <ProductPage />
-              <ProductPage />
-              <ProductPage />
-              <ProductPage />
-              <ProductPage />
-              <ProductPage />
-              <ProductPage />
-              <ProductPage />
-              <ProductPage />
+              })}
 
             </Slider>
           </div>
