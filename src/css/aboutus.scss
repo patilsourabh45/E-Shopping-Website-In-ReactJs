@@ -27,3 +27,86 @@
     font-style:italic;
 
 }
+
+.aboutus-black{
+height:auto;
+width: auto;
+background-color: black;
+// margin-top:50px !important;
+}
+
+.aboutus-columns{
+    height:280px;
+    width:auto;
+    border:1px solid white;
+}
+
+.aboutus-stack{
+    margin-top: 40px;
+    margin-right: 25px;
+    margin-left: 25px;
+    margin-bottom: 40px;
+}
+
+.aboutus-stack-heading{
+    color:white;
+    text-align: center;
+    margin-top:20px !important;
+}
+
+.aboutus-desc{
+    color:white;
+    margin: 25px !important;
+}
+
+.aboutus-pink{
+    background-color: pink;
+    height:auto;
+    width: auto;
+    justify-content: center;
+    // margin-top:50px !important;
+}
+
+.aboutus-stack-heading-1{
+    color:black;
+    text-align: center;
+    margin-top:20px !important;
+}
+
+.aboutus-brands{
+height:4rem;
+width:4rem;
+color:gray;
+opacity:0.5;
+}
+
+.aboutus-slider-1{
+    display:flex;
+    justify-content:space-evenly;
+    margin-bottom:3rem;
+    margin-top:3rem;
+
+}
+
+.aboutus-white{
+    height:auto;
+    width: auto;
+    background-color: white;
+    //  margin-top:50px !important;
+}
+
+.black-border{
+    height:280px;
+    width:auto;
+    border:1px solid black;
+}
+
+// .top-bottom-black-border{
+// border-top:1px solid black;
+// border-bottom:1px solid black;
+// }
+
+// .top-bottom-white-border{
+//     border-top:1px solid white;
+//     border-bottom:1px solid white;
+//     }
